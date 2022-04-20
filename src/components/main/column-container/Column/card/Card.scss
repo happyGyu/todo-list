@@ -1,0 +1,85 @@
+@import '@/scss/variable.scss';
+
+.card {
+    padding: 16px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    width: $column-width;
+    background-color: $white;
+    position: relative;
+
+    &--normal {
+        height: 108px;
+    }
+    
+    &--editing {
+        height: 139px;
+    }
+
+    &-contents {
+        
+        &__title {
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+
+        &__author {
+            color: $light-gray;
+        }
+    }
+
+    &__delete-btn{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 24px;
+        height: 24px;
+        background-image: url(@/images/close.png);
+
+        &:hover {
+            background-image: url(@/images/close-activated.png);
+        }
+    }
+
+    &--deleting {
+        background-color: $white-red;
+        border: solid 1px $red;
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: space-between;
+
+        .activated {
+            background-color: $blue;
+        }
+    }
+
+    &__btn {
+        width: 134px;
+        height: 40px;
+        border-radius: 6px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    &__cancel-btn {
+        background-color: $light-gray;
+        color: $dark-gray;
+    }
+
+    &__confirm-btn {
+        background-color: $light-blue;
+        color: $white;
+    }
+}
+
+.shadow {
+    opacity: 0.2;
+    box-shadow: 0 0 0 1px $blue inset; 
+}
+
+.following {
+    position: absolute;
+    z-index: 100;
+}
